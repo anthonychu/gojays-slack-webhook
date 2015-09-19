@@ -19,8 +19,8 @@ http.createServer(function (req, res) {
         var username;
         if (jays.streak_type === 'win') {
             username = jays.streak_total + '-game winning streak!\n';
-        } else if (jays.rank === 1) {
-            username = "We're number one!";
+        } else {
+            username = "We're number " + jays.rank + "!";
         }
             
         var formattedAlEastStandings = 
