@@ -24,7 +24,7 @@ http.createServer(function (req, res) {
         }
             
         var formattedAlEastStandings = 
-            'AL East Standings\n' +
+            "Check out how we're doing...\n" +
             '```\n' +
             createRow('', '', 'W', 'L', 'GB') + '\n' +
             pad(48, '', '-') + '\n' +
