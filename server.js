@@ -14,7 +14,7 @@ http.createServer(function (req, res) {
             .sortBy('rank')
             .value();
             
-        var jays = alEast.findWhere({ 'team_id': 'toronto-blue-jays' });
+        var jays = _.findWhere(alEast, { 'team_id': 'toronto-blue-jays' });
         
         var message = '';
         if (jays.streak_type === 'win') {
