@@ -16,13 +16,14 @@ http.createServer(function (req, res) {
             
         var jays = _.findWhere(alEast, { 'team_id': 'toronto-blue-jays' });
         
-        var message = '';
+        var username;
         if (jays.streak_type === 'win') {
-            message = jays.streak_total + '-game winning streak!\n';
+            username = ':fire: ' + jays.streak_total + '-game winning streak!\n';
+        } else if (jays.rank === 1) {
+            username = "We're number one!";
         }
             
         var formattedAlEastStandings = 
-            message +
             '```\n' +
             createRow('AL East', '', 'W', 'L', 'GB') + '\n' +
             pad(48, '', '-') + '\n' +
@@ -34,6 +35,7 @@ http.createServer(function (req, res) {
         console.log(formattedAlEastStandings);
 
         res.end(JSON.stringify({
+            username: username,
             text: formattedAlEastStandings
         }));
     });
