@@ -20,11 +20,11 @@ http.createServer(function (req, res) {
         if (jays.streak_type === 'win') {
             username = jays.streak_total + '-game winning streak!\n';
         } else {
-            username = "We're number " + jays.rank + "!";
+            username = "Blue Jays are number " + jays.rank + "!!!";
         }
             
         var formattedAlEastStandings = 
-            "Check out how we're doing...\n" +
+            "Check out how the Blue Jays are doing...\n" +
             '```\n' +
             createRow('', '', 'W', 'L', 'GB') + '\n' +
             pad(48, '', '-') + '\n' +
