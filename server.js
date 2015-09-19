@@ -24,8 +24,8 @@ http.createServer(function (req, res) {
         }
             
         var formattedAlEastStandings = 
-            '```\n' +
             'AL East Standings\n' +
+            '```\n' +
             createRow('', '', 'W', 'L', 'GB') + '\n' +
             pad(48, '', '-') + '\n' +
             _.map(alEast, function (t) {
